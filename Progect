@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using cod;
+namespace cod
+{
+   /* void  Student{
+
+}*/
+    class Program
+    {
+     
+
+        static void Main(string[] args)
+        {
+        
+       
+       
+            short thislo;
+            bool a=true;
+            Game game=new Game();
+            for(;a;){
+            	//Console.WriteLine(game.Number);
+            thislo=	Convert.ToInt16(Console.ReadLine());
+            	
+            	//Console.WriteLine(thislo);
+            	if(game.Get_right(thislo) ){
+            	a=false;
+            		Console.WriteLine("victory");
+            		
+            	}else{
+            		game.Number_of_attempts--;
+            		if(	game.Number_of_attempts<1){
+            			
+            			game.Reset();
+            			Console.WriteLine("	All over again");
+            		
+            			
+            		}
+            	}
+            	
+            	
+            }
+        }
+
+
+    }
+}
